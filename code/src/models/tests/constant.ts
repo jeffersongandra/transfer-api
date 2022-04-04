@@ -1,5 +1,5 @@
-import { CreatePaymentOrderDto } from "../types/dto/payment-orders.dto";
-import { ConsultPaymentOrder, CreatedPaymentOrder, StatusEnum, PaymentOrder } from "../types/payment-orders";
+import { CreatePaymentOrderDto, PaymentOrderDto } from "../types/dto/payment-orders.dto";
+import { StatusEnum } from "../types/payment-orders";
 
 
 export const fakeCreatePaymentOrder: CreatePaymentOrderDto = {
@@ -8,23 +8,9 @@ export const fakeCreatePaymentOrder: CreatePaymentOrderDto = {
     "expectedOn" : "05-11-2022",
 };
 
-export const fakePaymentOrder: PaymentOrder = {
+export const fakePaymentOrder: PaymentOrderDto = {
     externalId: "external_id",
     value: 10.00,
     status: StatusEnum.created,
-    expectedOn : "05-11-2022",
-    
-};
-
-export const fakeCreatedPaymentOrder: CreatedPaymentOrder = {
-    "internalId": "internal_id",
-    "status": StatusEnum.created,
-};
-
-export const fakeConsultPaymentOrder: ConsultPaymentOrder = {
-    "internalId": "internal_id",
-    "externalId": "external_id",
-    "status": StatusEnum.created,
-    "amount": 1000,
-    "expectedOn" : "05-11-2022",
+    expectedOn : new Date('05-05-2022'),   
 };

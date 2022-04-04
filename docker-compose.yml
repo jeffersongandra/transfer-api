@@ -11,15 +11,15 @@ services:
     environment:
       - NODE_ENV=local
       - PORT=3000
-      - URL_DATABASE=mongodb://zintegrator-api-db:27017/transfer
+      - URL_DATABASE=mongodb://transfer-api-db:27017/transfer
 
-    transfer-api-db:
-        container_name: transfer-api-db
-        image: mongo
-        volumes:
-          - transfer-api-db:/data/db
-        ports:
-          - "27011:27017"
+  transfer-api-db:
+      container_name: transfer-api-db
+      image: mongo
+      volumes:
+        - transfer-api-db:/data/db
+      ports:
+        - "27011:27017"
 
 volumes:
   transfer-api-db:
