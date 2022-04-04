@@ -1,5 +1,5 @@
 import { INestApplication, ValidationPipe } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test  } from '@nestjs/testing';
 import * as request from "supertest";
 import { fakeCreatePaymentOrder, fakePaymentOrder } from '../../../models/tests/constant';
 import { PaymentOrdersService } from '../../../models/services/payment-orders/payment-orders/payment-orders.service';
@@ -20,7 +20,7 @@ describe('PaymentOrdersController', () => {
       search: () => Promise.resolve(fakePaymentOrder),
     } as unknown as PaymentOrdersService;
 
-    const module: TestingModule = await Test.createTestingModule({
+    const module = await Test.createTestingModule({
       controllers: [PaymentOrdersController],
       providers: [PaymentOrdersService]
     })

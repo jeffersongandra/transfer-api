@@ -1,6 +1,6 @@
 import { Model } from "mongoose";
 import { getModelToken, MongooseModule } from '@nestjs/mongoose';
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
 import { MongoMemoryServer } from 'mongodb-memory-server-global';
 import { paymentOrderCollection, PaymentOrderSchema } from '../../../schemas/payment-orders/payment-orders.schema';
 import { PaymentOrderModel } from '../../../types/contracts';
