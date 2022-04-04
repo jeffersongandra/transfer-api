@@ -5,7 +5,7 @@ services:
     image: transfer-api
     build: .
     volumes:
-      - ./code:/app
+      - .:/app
     ports:
       - "3000:3000"
     environment:

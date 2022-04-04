@@ -1,9 +1,9 @@
 import MongoMemoryServer from "mongodb-memory-server-core";
 import { connect, connection, model, Model, ConnectOptions } from "mongoose";
-import { PaymentOrderModel } from "src/models/types/contracts";
-import { PaymentOrderDto } from "src/models/types/dto/payment-orders.dto";
+import { PaymentOrderDto } from "../../types/dto/payment-orders.dto";
 import { fakePaymentOrder } from "../../tests/constant";
 import { paymentOrderCollection, PaymentOrderSchema } from "./payment-orders.schema";
+import { PaymentOrderModel } from "../../../models/types/contracts";
 
 describe('PaymentOrder schema test', () => {
     let paymentOrderModel: Model<PaymentOrderModel>;

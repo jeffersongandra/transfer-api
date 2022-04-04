@@ -6,7 +6,7 @@ import { paymentOrderCollection, PaymentOrderSchema } from '../../../schemas/pay
 import { PaymentOrderModel } from '../../../types/contracts';
 import { PaymentOrdersService } from './payment-orders.service';
 import { fakeCreatePaymentOrder, fakePaymentOrder } from "../../../tests/constant";
-import { PaymentOrder } from "src/models/types/payment-orders";
+import { PaymentOrder } from "../../../../models/types/payment-orders";
 import { MethodNotAllowedException, NotFoundException } from "@nestjs/common";
 
 describe('PaymentOrdersService', () => {
