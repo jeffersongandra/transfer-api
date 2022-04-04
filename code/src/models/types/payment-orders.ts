@@ -8,6 +8,9 @@ export enum StatusEnum {
 }  
 
 export class PaymentOrder {
+  @ApiProperty({ required: false, type: String, example: 'id'})
+  id?: string;
+
   @ApiProperty({ required: true, type: String, example: 'external_id'})
   externalId: string;
 
@@ -17,26 +20,6 @@ export class PaymentOrder {
   @ApiProperty({required: true, type: StatusEnum, example: 'CREATED'})
   status: StatusEnum;
 
-  @ApiProperty({ required: true, type: String, example: 'dd-mm-yyyy'})
-  expectedOn: string;
-}
-
-export class CreatedPaymentOrder {
-  @ApiProperty({ required: true, type: String, example: 'internal_id'})
-  internalId: string;
-
-  @ApiProperty({required: true, type: StatusEnum, example: 'CREATED'})
-  status: StatusEnum;
-}
-
-export class ConsultPaymentOrder extends CreatedPaymentOrder {
-
-  @ApiProperty({ required: true, type: String, example: 'external_id'})
-  externalId: string;
-
-  @ApiProperty({ required: true, type: Number, example: 1000})
-  amount: number;
-
-  @ApiProperty({ required: true, type: String, example: 'dd-mm-yyyy'})
+  @ApiProperty({ required: true, type: String, example: new Date().toISOString})
   expectedOn: string;
 }

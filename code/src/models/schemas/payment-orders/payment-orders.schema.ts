@@ -3,7 +3,7 @@ import { schemaOptions } from "../../mongoSchemaOptions"
 import { PaymentOrderModel } from "../../types/contracts"
 import { StatusEnum } from "../../types/payment-orders"
 
-export const PaymentOrderCollection = 'PaymentOrder'
+export const paymentOrderCollection = 'PaymentOrder'
 
 export const PaymentOrderSchema = new Schema<PaymentOrderModel>({
   externalId: { type: String, require: true },

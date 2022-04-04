@@ -3,9 +3,10 @@ import { StatusEnum } from "../types/payment-orders";
 
 
 export const fakeCreatePaymentOrder: CreatePaymentOrderDto = {
-    "externalId": "external_id",
-    "amount": 1000,
-    "expectedOn" : "05-11-2022",
+    externalId: "external_id",
+    amount: 1000,
+    expectedOn : "05-11-2022",
+    dueDate: "05-11-2022",
 };
 
 export const fakePaymentOrder: PaymentOrderDto = {
