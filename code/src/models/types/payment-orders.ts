@@ -7,6 +7,20 @@ export enum StatusEnum {
   rejected = 'REJECTED',
 }  
 
+export class PaymentOrder {
+  @ApiProperty({ required: true, type: String, example: 'external_id'})
+  externalId: string;
+
+  @ApiProperty({required: true, type: String, example: 10.00})
+  value: number;
+
+  @ApiProperty({required: true, type: StatusEnum, example: 'CREATED'})
+  status: StatusEnum;
+
+  @ApiProperty({ required: true, type: String, example: 'dd-mm-yyyy'})
+  expectedOn: string;
+}
+
 export class CreatedPaymentOrder {
   @ApiProperty({ required: true, type: String, example: 'internal_id'})
   internalId: string;
