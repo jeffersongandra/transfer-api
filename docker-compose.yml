@@ -5,12 +5,13 @@ services:
     image: transfer-api
     build: .
     volumes:
-      - ./code:/app
+      - .:/app
     ports:
       - "3008:3000"
     environment:
       - NODE_ENV=local
       - PORT=3000
+      - PAYMENT_API_HOST=localhost:3001
       - URL_DATABASE=mongodb://transfer-api-db:27017/transfer
 
   transfer-api-db:
