@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { AxiosRequestConfig } from 'axios';
-import { fakeCreatePaymentOrder } from '../../../tests/constants';
-import { PaymentOrder, CreatedPaymentOrder } from '../../../models/types/payment-orders';
+import { fakeConsultPaymentOrder, fakeCreatePaymentOrder } from '../../../tests/constants';
+import { PaymentOrder, CreatedPaymentOrder, ConsultPaymentOrder } from '../../../models/types/payment-orders';
 import { getUrlGenerator } from '../../../utils/getUrlGenerator';
 
 @Injectable()
@@ -28,7 +28,7 @@ export class PaymentOrderService {
         return fakeCreatePaymentOrder
     }
 
-    getPaymentOrder = (order: PaymentOrder): CreatedPaymentOrder => {
-        return fakeCreatePaymentOrder
+    getPaymentOrder = (internalId: string): ConsultPaymentOrder => {
+        return fakeConsultPaymentOrder
     }
 }

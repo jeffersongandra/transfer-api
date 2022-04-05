@@ -5,8 +5,8 @@ import { Schema } from "mongoose"
 export const transferCollection = 'transfer';
 
 export const TransferSchema = new Schema<Transfer>({
-    internalId: {type: String, require: true},
-    externalId: {type: String, require: true},
+    fromId: {type: String, require: true},
+    toId: {type: String, require: true},
     value: {type: Number, require: true},
     expectedOn: {type: String, require: false},
 }, schemaOptions)
