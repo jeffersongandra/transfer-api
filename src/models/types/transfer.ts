@@ -1,6 +1,6 @@
-class transferDto {
+export class Transfer {
     internalId: string;
     externalId: string;
-    amount: number;
-    expectedOn: string;
+    value: number;
+    expectedOn: String;
 }

@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { AxiosRequestConfig } from 'axios';
-import { fakeCreatePaymentOrder } from 'src/tests/constants';
+import { fakeCreatePaymentOrder } from '../../../tests/constants';
 import { PaymentOrder, CreatedPaymentOrder } from '../../../models/types/payment-orders';
 import { getUrlGenerator } from '../../../utils/getUrlGenerator';
 
